@@ -1,0 +1,137 @@
+Imports MySql.Data.MySqlClient
+
+Public Class FillupForm
+
+
+    Dim connectionString As String = "Server=10.0.1.26;Port=3306;Database=propertymanagementdatabase;Uid=longlong;Pwd=Cy[ltM)yUqZ[W/Vc;"
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        listView1.Columns.Add("Purchase Order Number", 150)
+        listView1.Columns.Add("Description", 200)
+        listView1.Columns.Add("Amount", 100)
+        listView1.Columns.Add("Personal In Charge", 150)
+
+        button1.Text = "SEARCH"
+        button2.Text = "SUBMIT"
+
+
+        LoadData()
+    End Sub
+
+
+    Private Sub LoadData()
+        listView1.Items.Clear()
+
+        Try
+            Using conn As New MySqlConnection(connectionString)
+                conn.Open()
+
+
+                Dim query As String = "SELECT Purchase Order, Description, Amount, Personal incharge FROM tblproperty"
+
+                Using cmd As New MySqlCommand(query, conn)
+                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+
+                        While reader.Read()
+                            Dim item As New ListViewItem(reader("Purchase Order").ToString())
+                            item.SubItems.Add(reader("Description").ToString())
+                            item.SubItems.Add(reader("Amount").ToString())
+                            item.SubItems.Add(reader("Personal incharge").ToString())
+
+                            listView1.Items.Add(item)
+                        End While
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+    Private Sub button2_Click(sender As Object, e As EventArgs) Handles button2.Click
+
+        If String.IsNullOrEmpty(textBox1.Text) OrElse
+           String.IsNullOrEmpty(textBox4.Text) OrElse
+           String.IsNullOrEmpty(textBox3.Text) OrElse
+           String.IsNullOrEmpty(textBox2.Text) Then
+            MessageBox.Show("Please fill all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+
+        Try
+            Using conn As New MySqlConnection(connectionString)
+                conn.Open()
+
+
+                Dim query As String = "INSERT INTO tblproperty (Purchase Order, Description, Amount, Personal incharge) " &
+                                      "VALUES (@purchaseOrderNumber, @description, @amount, @personInCharge)"
+
+                Using cmd As New MySqlCommand(query, conn)
+
+                    cmd.Parameters.AddWithValue("@purchaseOrderNumber", textBox1.Text)
+                    cmd.Parameters.AddWithValue("@description", textBox4.Text)
+                    cmd.Parameters.AddWithValue("@amount", textBox3.Text)
+                    cmd.Parameters.AddWithValue("@personInCharge", textBox2.Text)
+
+                    cmd.ExecuteNonQuery()
+                End Using
+            End Using
+
+            textBox1.Clear()
+            textBox4.Clear()
+            textBox3.Clear()
+            textBox2.Clear()
+
+            LoadData()
+
+            MessageBox.Show("Data submitted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+
+            MessageBox.Show("Error: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub button1_Click(sender As Object, e As EventArgs) Handles button1.Click
+        Dim searchQuery As String = textBox5.Text.Trim().ToLower()
+        Dim matchFound As Boolean = False
+
+        For Each item As ListViewItem In listView1.Items
+            If item.Text.ToLower().Contains(searchQuery) OrElse
+               item.SubItems(1).Text.ToLower().Contains(searchQuery) OrElse
+               item.SubItems(3).Text.ToLower().Contains(searchQuery) Then
+                MessageBox.Show($"Purchase Order Number: {item.Text}" & vbCrLf &
+                                $"Description: {item.SubItems(1).Text}" & vbCrLf &
+                                $"Amount: {item.SubItems(2).Text}" & vbCrLf &
+                                $"Person In Charge: {item.SubItems(3).Text}", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                matchFound = True
+                Exit For
+            End If
+
+            Dim amountValue As String = item.SubItems(2).Text.Replace(",", "").Trim()
+            If IsNumeric(amountValue) AndAlso amountValue.Contains(searchQuery) Then
+                MessageBox.Show($"Purchase Order Number: {item.Text}" & vbCrLf &
+                                $"Description: {item.SubItems(1).Text}" & vbCrLf &
+                                $"Amount: {item.SubItems(2).Text}" & vbCrLf &
+                                $"Person In Charge: {item.SubItems(3).Text}", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                matchFound = True
+                Exit For
+            End If
+        Next
+
+        If Not matchFound Then
+            MessageBox.Show("No matching record found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub textBox1_TextChanged(sender As Object, e As EventArgs) Handles textBox1.TextChanged
+
+    End Sub
+End Class
