@@ -22,10 +22,200 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader11 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader12 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader13 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader14 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader15 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader16 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader17 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.SuspendLayout()
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17})
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(12, 110)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(1770, 404)
+        Me.ListView1.TabIndex = 0
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(1311, 28)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(338, 22)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(1247, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(67, 20)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Search:"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1671, 28)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "SEARCH"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(1707, 90)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Add"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Account Code"
+        Me.ColumnHeader1.Width = 115
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Fund"
+        Me.ColumnHeader2.Width = 75
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Category"
+        Me.ColumnHeader3.Width = 113
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Subcategory"
+        Me.ColumnHeader4.Width = 91
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Description"
+        Me.ColumnHeader5.Width = 93
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Date of Purchase"
+        Me.ColumnHeader6.Width = 155
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "Inventory Item No."
+        Me.ColumnHeader7.Width = 152
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "PO No."
+        Me.ColumnHeader8.Width = 61
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "Unit"
+        Me.ColumnHeader9.Width = 58
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "Qty"
+        Me.ColumnHeader10.Width = 58
+        '
+        'ColumnHeader11
+        '
+        Me.ColumnHeader11.Text = "Unit Value"
+        Me.ColumnHeader11.Width = 93
+        '
+        'ColumnHeader12
+        '
+        Me.ColumnHeader12.Text = "On Hand Count"
+        Me.ColumnHeader12.Width = 106
+        '
+        'ColumnHeader13
+        '
+        Me.ColumnHeader13.Text = "On Hand Value"
+        Me.ColumnHeader13.Width = 110
+        '
+        'ColumnHeader14
+        '
+        Me.ColumnHeader14.Text = "Person Responsible"
+        Me.ColumnHeader14.Width = 158
+        '
+        'ColumnHeader15
+        '
+        Me.ColumnHeader15.Text = "Office"
+        Me.ColumnHeader15.Width = 79
+        '
+        'ColumnHeader16
+        '
+        Me.ColumnHeader16.Text = "Additional Information"
+        Me.ColumnHeader16.Width = 144
+        '
+        'ColumnHeader17
+        '
+        Me.ColumnHeader17.Text = "Remarks"
+        Me.ColumnHeader17.Width = 106
+        '
+        'Form1
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form1"
+        Me.ClientSize = New System.Drawing.Size(1794, 526)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ListView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Form1"
+        Me.Text = "Property Management System"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
+    Friend WithEvents ColumnHeader11 As ColumnHeader
+    Friend WithEvents ColumnHeader12 As ColumnHeader
+    Friend WithEvents ColumnHeader13 As ColumnHeader
+    Friend WithEvents ColumnHeader14 As ColumnHeader
+    Friend WithEvents ColumnHeader15 As ColumnHeader
+    Friend WithEvents ColumnHeader16 As ColumnHeader
+    Friend WithEvents ColumnHeader17 As ColumnHeader
+    Friend WithEvents Button2 As Button
 End Class
