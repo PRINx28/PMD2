@@ -1,4 +1,8 @@
-﻿Public Class Form1
+﻿Imports System.Threading
+Imports PMSsearch ' Add this line at the top to fix the error
+
+Public Class Form1
+
     ' Declare a flag to check password visibility
     Private passwordVisible As Boolean = False
 
@@ -36,8 +40,16 @@
 
     ' Button1 (Login) Click event
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' Add your login logic here, like checking username and password
-        MessageBox.Show("Logging in...") ' Example message, replace with actual login logic
+        ' Display the message "Proceeding to log in"
+        MessageBox.Show("Proceeding to log in...", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' Introduce a brief delay (2 seconds)
+        Thread.Sleep(2000) ' Use Thread.Sleep without System.Threading if you imported it
+
+        ' Open the PMSsearch form after the delay
+        Dim Form2 As New Form2()
+        Form2.Show() ' Show the PMSsearch form
+        Me.Hide() ' Hide the current form (Form1)
     End Sub
 
     ' Button2 (Quit) Click event
