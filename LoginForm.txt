@@ -1,0 +1,49 @@
+Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
+
+Public Class LoginForm
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Connection string
+        Dim connectionString As String = "Server=10.0.1.26;Port=3306;Database=propertymanagementdatabase;Uid=longlong;Pwd=Cy[ltM)yUqZ[W/Vc;"
+
+        ' Inputs from the textboxes
+        Dim username As String = TextBox1.Text
+        Dim password As String = TextBox2.Text
+
+        ' Validation to ensure fields are not empty
+        If String.IsNullOrWhiteSpace(username) Or String.IsNullOrWhiteSpace(password) Then
+            MessageBox.Show("Please fill in both Username and Password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        ' Query to insert data
+        Dim query As String = "INSERT INTO tbluser (username, password) VALUES (@username, @password)"
+
+        ' Try-Catch for error handling
+        Try
+            Using connection As New MySqlConnection(connectionString)
+                Using command As New MySqlCommand(query, connection)
+                    ' Add parameters to the query
+                    command.Parameters.AddWithValue("@username", username)
+                    command.Parameters.AddWithValue("@password", password)
+
+                    ' Open the connection
+                    connection.Open()
+
+                    ' Execute the query
+                    Dim result As Integer = command.ExecuteNonQuery()
+
+                    ' Check if the query was successful
+                    If result > 0 Then
+                        MessageBox.Show("Data inserted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Else
+                        MessageBox.Show("No data inserted. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            ' Display error message
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+End Class
