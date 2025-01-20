@@ -1,4 +1,9 @@
-﻿Public Class Form1
+﻿Imports System.Threading
+Imports System.Diagnostics ' For Process.Start
+Imports System.IO ' For file path checks
+
+Public Class Form1
+
     ' Declare a flag to check password visibility
     Private passwordVisible As Boolean = False
 
@@ -7,7 +12,7 @@
         ' Set the password field to password mode initially
         TextBox2.PasswordChar = "*"c
         ' Set the default button text to "Show Password"
-        Button3.Text = "Show Password" ' Set Button3 text
+        Button3.Text = "Show Password"
     End Sub
 
     ' TextBox1 (Username) TextChanged event
@@ -36,8 +41,27 @@
 
     ' Button1 (Login) Click event
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' Add your login logic here, like checking username and password
-        MessageBox.Show("Logging in...") ' Example message, replace with actual login logic
+        ' Display the message "Proceeding to log in"
+        MessageBox.Show("Proceeding to log in...", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        ' Introduce a brief delay (2 seconds)
+        Thread.Sleep(2000)
+
+        ' Now, attempt to launch PMSsearch.exe if it exists
+        Dim pmsSearchPath As String = "C:\PMS2\PMD2\PMS\PMSsearch.exe"
+
+        If File.Exists(pmsSearchPath) Then
+            ' Launch PMSsearch.exe
+            Try
+                Process.Start(pmsSearchPath)
+            Catch ex As Exception
+                ' If there is an error starting the process, show an error message
+                MessageBox.Show("An error occurred while trying to launch PMSsearch.exe: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        Else
+            ' Show an error message if the file is not found
+            MessageBox.Show("PMSsearch.exe not found at the specified location: " & pmsSearchPath, "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     ' Button2 (Quit) Click event
@@ -62,4 +86,5 @@
             Button3.Text = "Hide Password"
         End If
     End Sub
+
 End Class

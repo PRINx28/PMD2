@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Form2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,12 +22,8 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -45,58 +41,28 @@ Partial Class Form1
         Me.ColumnHeader15 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader16 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader17 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17})
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 110)
+        Me.ListView1.Location = New System.Drawing.Point(13, 84)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(1770, 404)
+        Me.ListView1.Size = New System.Drawing.Size(1153, 554)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(1311, 28)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(338, 22)
-        Me.TextBox1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(1247, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(67, 20)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Search:"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1671, 28)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "SEARCH"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1707, 90)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Add"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Account Code"
-        Me.ColumnHeader1.Width = 115
+        Me.ColumnHeader1.Width = 106
         '
         'ColumnHeader2
         '
@@ -121,7 +87,7 @@ Partial Class Form1
         'ColumnHeader6
         '
         Me.ColumnHeader6.Text = "Date of Purchase"
-        Me.ColumnHeader6.Width = 155
+        Me.ColumnHeader6.Width = 152
         '
         'ColumnHeader7
         '
@@ -146,17 +112,17 @@ Partial Class Form1
         'ColumnHeader11
         '
         Me.ColumnHeader11.Text = "Unit Value"
-        Me.ColumnHeader11.Width = 93
+        Me.ColumnHeader11.Width = 119
         '
         'ColumnHeader12
         '
         Me.ColumnHeader12.Text = "On Hand Count"
-        Me.ColumnHeader12.Width = 106
+        Me.ColumnHeader12.Width = 151
         '
         'ColumnHeader13
         '
         Me.ColumnHeader13.Text = "On Hand Value"
-        Me.ColumnHeader13.Width = 110
+        Me.ColumnHeader13.Width = 124
         '
         'ColumnHeader14
         '
@@ -166,30 +132,74 @@ Partial Class Form1
         'ColumnHeader15
         '
         Me.ColumnHeader15.Text = "Office"
-        Me.ColumnHeader15.Width = 79
+        Me.ColumnHeader15.Width = 66
         '
         'ColumnHeader16
         '
         Me.ColumnHeader16.Text = "Additional Information"
-        Me.ColumnHeader16.Width = 144
+        Me.ColumnHeader16.Width = 143
         '
         'ColumnHeader17
         '
         Me.ColumnHeader17.Text = "Remarks"
-        Me.ColumnHeader17.Width = 106
+        Me.ColumnHeader17.Width = 151
         '
-        'Form1
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(154, 13)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(338, 22)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(82, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 23)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Search:"
+        '
+        'Button2
+        '
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.Location = New System.Drawing.Point(559, 9)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(29, 31)
+        Me.Button2.TabIndex = 4
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(510, 10)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(27, 27)
+        Me.Button3.TabIndex = 5
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1794, 526)
+        Me.ClientSize = New System.Drawing.Size(1181, 650)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ListView1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
+        Me.Name = "Form2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Property Management System"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -199,7 +209,6 @@ Partial Class Form1
     Friend WithEvents ListView1 As ListView
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
@@ -218,4 +227,5 @@ Partial Class Form1
     Friend WithEvents ColumnHeader16 As ColumnHeader
     Friend WithEvents ColumnHeader17 As ColumnHeader
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

@@ -119,5 +119,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMSsearch\PMSsearch.vbproj">
+      <Project>{093ED5C2-C9F2-409C-9C2B-D037C5FE7D64}</Project>
+      <Name>PMSsearch</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

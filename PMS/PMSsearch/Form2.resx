@@ -118,6 +118,28 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADvSURBVEhL5ZY9DoJAFITpNHoHvZ0/B7Kw0BOhpY16F2c2
+        bGLgjXHJbCj4kilgx+8Bja+ZPUvkiJyQsyl0HRC6Q3hwR17IBYkkY0IXnTckHM6neiKrdOWFzjeyT1c9
+        +En4dLW4IpwxIH+aWkh/6eBtl3+xDbb1bSKB7NtEAtm3iQSybxMJZN8mEsh+dLBB8v1+Hl2iM4a//Sbf
+        HxAdTDb4F7a+TSSQfZtIIPs2kUD2bSKB7NtEAtkvFU32t1iK9E+2+nAR4zZYY9lbI1z2dumqB1dPrqAs
+        uNdbOltkgYRwON+cnySSjAldfFM5dA40zQe61Y5XKqDB7gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EAAACxABrSO9dQAAAVtJREFUSEvllk1OwkAYhhsXegJxjy5lDVxC1IUr4048hRASDoHRK4EncamJiYm+
+        z8gk6HydMi1DSHiSJzDQfm/nr5lirzmQQ/mUSWqTEfAg3+SztG5sIjWpTXjATHJBLqhNRoB/ulyU1t/5
+        4BPZkS3XWp/awdfyVX6vuJCXch1qBU/lu3yUbXkoT5dtfp/IKpKDryTFu64V0pP8f+Fa5SQHM7z0LMZI
+        zn+/lpIUzEJiLhneGGeS645dyyYpmNVLQeY0xpHkunPXskkKZstQkIUUw/c4tsWSgoEtUzXHY8l1MZKD
+        B5JVy+q16MsPufFVDexTwlm9DDtzzvDSU0K/5K2MUSsY6BFbhrn00mZECP1cfpZRO9jDlrHe1VXhjYNj
+        3EjC71zrL1mDwfecKVglezAQ+v8ttpVgi90Lzn3Ye5HmYY+jZ+7j7b0M4LDNHzyVdXMTqUlt80C/DxTF
+        D+xGngZL9eYxAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABABcAMDACAAEAAQAwAwAAdgEAACAgAgABAAEAMAEAAKYEAAAQEAIAAQABALAAAADWBQAAAAAQAAEA
