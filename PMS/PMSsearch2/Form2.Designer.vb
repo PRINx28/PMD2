@@ -51,17 +51,19 @@ Partial Class Form2
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(22, 25)
+        Me.Label1.Location = New System.Drawing.Point(16, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 28)
+        Me.Label1.Size = New System.Drawing.Size(61, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Search:"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(105, 31)
+        Me.TextBox1.Location = New System.Drawing.Point(79, 25)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(380, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(286, 20)
         Me.TextBox1.TabIndex = 1
         '
         'Button1
@@ -69,9 +71,10 @@ Partial Class Form2
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(491, 24)
+        Me.Button1.Location = New System.Drawing.Point(368, 20)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(36, 36)
+        Me.Button1.Size = New System.Drawing.Size(27, 29)
         Me.Button1.TabIndex = 2
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -80,9 +83,10 @@ Partial Class Form2
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(539, 27)
+        Me.Button2.Location = New System.Drawing.Point(409, 22)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(42, 31)
+        Me.Button2.Size = New System.Drawing.Size(27, 27)
         Me.Button2.TabIndex = 3
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -91,9 +95,10 @@ Partial Class Form2
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10, Me.ColumnHeader11, Me.ColumnHeader12, Me.ColumnHeader13, Me.ColumnHeader14, Me.ColumnHeader15, Me.ColumnHeader16, Me.ColumnHeader17})
         Me.ListView1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 85)
+        Me.ListView1.Location = New System.Drawing.Point(9, 69)
+        Me.ListView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(994, 451)
+        Me.ListView1.Size = New System.Drawing.Size(746, 367)
         Me.ListView1.TabIndex = 4
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -185,15 +190,16 @@ Partial Class Form2
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1020, 547)
+        Me.ClientSize = New System.Drawing.Size(765, 444)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Property Management System"

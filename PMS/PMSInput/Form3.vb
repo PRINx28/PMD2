@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
-Imports PMSInput
-Imports PMSsearch
+Imports PMSsearch2
 
 
 Public Class Form3
@@ -134,11 +133,11 @@ Public Class Form3
 
     End Sub
 
-    Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
-        Dim Form2 As New Form2()
-        Form2.Show() ' Show the PMSsearch form
-        Me.Hide()
-    End Sub
+    'Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
+    '    Dim Form2 As New Form2()
+    '    Form2.Show()
+    '    Me.Hide()
+    'End Sub
 
 
     Private Sub ButtonInsert_Click(sender As Object, e As EventArgs) Handles ButtonInsert.Click

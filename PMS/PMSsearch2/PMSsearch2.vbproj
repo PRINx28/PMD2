@@ -119,5 +119,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PMSInput\PMSInput.vbproj">
+      <Project>{CB006FF7-1E00-44B1-B0BD-7912CC401D49}</Project>
+      <Name>PMSInput</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
