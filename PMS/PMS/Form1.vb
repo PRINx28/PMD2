@@ -48,7 +48,7 @@ Public Class Form1
         Thread.Sleep(2000)
 
         ' Now, attempt to launch PMSsearch.exe if it exists
-        Dim pmsSearchPath As String = "C:\PMS2\PMD2\PMS\PMSsearch.exe"
+        Dim pmsSearchPath As String = "C:\PMS2\PMD2\PMS\PMSsearch2.exe"
 
         If File.Exists(pmsSearchPath) Then
             ' Launch PMSsearch.exe
@@ -56,11 +56,11 @@ Public Class Form1
                 Process.Start(pmsSearchPath)
             Catch ex As Exception
                 ' If there is an error starting the process, show an error message
-                MessageBox.Show("An error occurred while trying to launch PMSsearch.exe: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("An error occurred while trying to launch PMSsearch2.exe: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         Else
             ' Show an error message if the file is not found
-            MessageBox.Show("PMSsearch.exe not found at the specified location: " & pmsSearchPath, "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("PMSsearch2.exe not found at the specified location: " & pmsSearchPath, "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
