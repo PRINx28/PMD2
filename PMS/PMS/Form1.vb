@@ -1,5 +1,10 @@
 ﻿Imports System.Threading
+<<<<<<< HEAD
 Imports PMSsearch ' Ensure PMSsearch namespace or reference exists in your project
+=======
+Imports System.Diagnostics ' For Process.Start
+Imports System.IO ' For file path checks
+>>>>>>> d8e852b237919740ccb7323cb5cac5641ecf5329
 
 Public Class Form1
 
@@ -10,6 +15,11 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Set the password field to password mode initially
         TextBox2.PasswordChar = "*"c
+<<<<<<< HEAD
+=======
+        ' Set the default button text to "Show Password"
+        Button3.Text = "Show Password"
+>>>>>>> d8e852b237919740ccb7323cb5cac5641ecf5329
     End Sub
 
     ' TextBox1 (Username) TextChanged event
@@ -44,10 +54,28 @@ Public Class Form1
         ' Introduce a brief delay (2 seconds)
         Thread.Sleep(2000)
 
+<<<<<<< HEAD
         ' Open the PMSsearch form after the delay
         Dim Form2 As New Form2()
         Form2.Show()
         Me.Hide()
+=======
+        ' Now, attempt to launch PMSsearch.exe if it exists
+        Dim pmsSearchPath As String = "C:\PMS2\PMD2\PMS\PMSsearch2.exe"
+
+        If File.Exists(pmsSearchPath) Then
+            ' Launch PMSsearch.exe
+            Try
+                Process.Start(pmsSearchPath)
+            Catch ex As Exception
+                ' If there is an error starting the process, show an error message
+                MessageBox.Show("An error occurred while trying to launch PMSsearch2.exe: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        Else
+            ' Show an error message if the file is not found
+            MessageBox.Show("PMSsearch2.exe not found at the specified location: " & pmsSearchPath, "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+>>>>>>> d8e852b237919740ccb7323cb5cac5641ecf5329
     End Sub
 
     ' Button2 (Quit) Click event
@@ -74,6 +102,9 @@ Public Class Form1
         passwordVisible = Not passwordVisible
     End Sub
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d8e852b237919740ccb7323cb5cac5641ecf5329
 End Class

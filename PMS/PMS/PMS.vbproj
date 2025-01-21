@@ -174,7 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PMSsearch\PMSsearch.vbproj">
-      <Project>{093ed5c2-c9f2-409c-9c2b-d037c5fe7d64}</Project>
+      <Project>{093ED5C2-C9F2-409C-9C2B-D037C5FE7D64}</Project>
       <Name>PMSsearch</Name>
     </ProjectReference>
   </ItemGroup>
